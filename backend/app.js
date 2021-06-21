@@ -1,19 +1,18 @@
 const express = require('express');
 const app = express();
+require('dotenv').config();
+
+require('./config/db');
 
 
 //middlewares
-app.use(require('./routes'));
+app.use(express.urlencoded({
+    extended: true,
+}));
+app.use(express.json());
 //app.use(require('./routes/api'));
+app.use(require('./routes'));
 
-//routes
-// app.get('/', (req, res) => {
-//     res.send('app.js index page');
-// });
-
-// app.get('/api', (req, res) => {
-//     res.send('app.js api index page');
-// });
 
 app.listen(3000, () => {
     console.log('listening on port 3000');
