@@ -1,0 +1,127 @@
+.App{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.sign-up-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.su-div-le{
+  
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.su-div-ri{
+    margin: 5px; 
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.su-div-ri-contact{
+    margin: 5px; 
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-up-img{
+    width: 80%;
+    height: 400px;
+}
+.contact-us-img{
+    width: 100%;
+    height: 400px;
+}
+.card-title{
+    text-align: left;
+    font-weight: 600;
+}
+.custom-width{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.lh{
+    margin-top: 20px;
+}
+
+.tc{
+    text-align: center;
+}
+
+.jumbotron{
+    background-color: white;
+}
+
+.card-bodys{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.checkboxx{
+    margin-left: 8%;
+}
+.ic{
+    width: 50px;
+    height: 30px;
+}
+
+.title-contact-us{
+    margin-bottom: 5%;
+    width: 100%;
+    text-align: center;
+}
+
+.circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #262638;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    color: white;
+}
+
+.df{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    margin: 5%;
+}
+.hr{
+    width: 100%;
+    padding: .1px;
+    background-color: #a7a7a7;
+}
+.card-text{
+    width:90%;
+}
+.contact-info{
+    width: 50%;
+}
+.row{
+    height: 100%;
+}
+.tagweb{
+    color: white;
+}
+.tagweb :hover{
+    color: rgb(195, 189, 209);
+}
