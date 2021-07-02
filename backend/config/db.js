@@ -24,7 +24,7 @@ db.on('error', () =>{
 });
 
 db.on('open', () =>{
-    console.log('successfully accessed the database');
+    console.log('successfully accessed MongoDB');
 });
 
 module.exports = mongoose;

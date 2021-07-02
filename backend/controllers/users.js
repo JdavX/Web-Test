@@ -8,7 +8,7 @@ exports.listAll = (req, res)=> {
     res.send('list all user');
 };
 
-exports.createUser = (req, res)=> {
+exports.createUser = async  (req, res) => {
     const user = new User({
         Id: req.body.Id,
         FirstName: req.body.FirstName,
@@ -19,9 +19,23 @@ exports.createUser = (req, res)=> {
         Password: req.body.Password,
     });
 
-    user.save().then((data) =>{
-        res.status(200).json(data);
-    });
+    try{
+        for (var key in user){
+             if(user.hasOwnProperty(key)){
+                const createUser = await user.save();
+                res.status(201).json({status: 'Successfully Created'});
+             }  else {
+                    res.status(401).json({status: 'Missing Parameter'});
+                } 
+        }
+    } catch (err) {
+       res.status(400).json({msg: err});     
+    }
+    // user.save().then((data) =>{
+    //     res.status(200).json(data);
+    // }).catch((err) => {
+    //     res.status(400).json({msg : err});
+    // });
 
-    res.status(200).json(user);
+    // res.status(200).json(user);
 };
